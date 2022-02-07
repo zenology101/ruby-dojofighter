@@ -11,8 +11,8 @@
 # create their opponent ```Akuma = Fighter.new("Akuma", 4,4,4,10)```
 
 # put a prompt telling the story and explaining the game
-require "./fighter.rb"
-puts "Welcome to Dojo Fighter! What is your |name|?"
+require "./fighting.rb"
+puts "Welcome to Dojo Fighter! Your |name|?"
 name = gets
 
 puts "Do you want to |fight| or |run|?"
@@ -56,13 +56,13 @@ while i <= 10
 # => prompts will pause the loop and wait for the user to input a choice
     # in the while loop ask the player how they'd like to train that week
     # based on their choice invoke the right dojo function to train the player
-puts "How do you want to train? Choose: |lift_weights|, |endurance_training|, or |toss_a_lucky_coin|."
+puts "How do you want to train? Choose: |lift_weights|, |endurance_training|, or |coin_in_fountain|."
     input = gets.chomp
-    if input == "lift_weights"
+    if input == ""
         Dojo.lift_weights(Player)
     elsif input == "endurance_training"
         Dojo.endurance_training(Player)
-    else input == "toss_a_lucky_coin"
+    else input == "coin_in_fountain"
         Dojo.coin_in_fountain(Player)
     end  
         i += 1
